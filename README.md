@@ -1,14 +1,14 @@
 # 🔍 Fake News Detector
 
-> An AI-powered news classification system built on a fine-tuned **DistilBERT** transformer that detects whether a news article is real or fake — with a confidence score and word-level explainability.
+> An AI-powered news classification system built on a fine-tuned **DistilBERT** transformer that detects whether a news article is real or fake, with a confidence score and word-level explainability.
 
 ## Overview
 
 This project builds an end-to-end fake news detection system using Natural Language Processing and Transfer Learning. Given the title and body of a news article, the model outputs:
 
-- A **classification label** — `FAKE` or `REAL`
-- A **confidence score** — probability for each class
-- An **explanation** — which words in the article most influenced the decision (powered by LIME)
+- A **classification label** : `FAKE` or `REAL`
+- A **confidence score** : probability for each class
+- An **explanation** : which words in the article most influenced the decision (powered by LIME)
 
 The model was fine-tuned on the **ISOT Fake News Dataset**, achieving **99.90% accuracy** and a **perfect ROC-AUC of 1.0000** on the held-out test set.
 
@@ -17,7 +17,7 @@ The model was fine-tuned on the **ISOT Fake News Dataset**, achieving **99.90% a
 ## Dataset
 
 **ISOT Fake News Dataset** — University of Victoria  
-Source: [Kaggle — emineyetm/fake-news-detection-datasets](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets)
+Source: [Kaggle : emineyetm/fake-news-detection-datasets](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets)
 
 | Split | Samples |
 |-------|---------|
@@ -28,7 +28,7 @@ Source: [Kaggle — emineyetm/fake-news-detection-datasets](https://www.kaggle.c
 | Validation | 6,735 (15%) |
 | Test  | 6,735 (15%) |
 
-The dataset contains two CSV files — `Fake.csv` and `True.csv` — each with columns: `title`, `text`, `subject`, `date`. Real articles were scraped from Reuters; fake articles from PolitiFact and other flagged sources.
+The dataset contains two CSV files — `Fake.csv` and `True.csv` each with columns: `title`, `text`, `subject`, `date`. Real articles were scraped from Reuters; fake articles from PolitiFact and other flagged sources.
 
 The split is **stratified**, ensuring balanced class ratios across all three sets. Shuffling is seeded at `42` for full reproducibility.
 
